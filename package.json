@@ -8,8 +8,9 @@
     "watch": "coffee --watch --compile --output ./ ./"
   },
   "author": "Willson Smith",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "coffee-script": "^1.9.3",
     "jest-cli": "^0.4.18"
   }
 }
