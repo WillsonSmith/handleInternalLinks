@@ -1,45 +1,33 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta charset="utf-8">
     <style>
       a[internal] {
         color: green;
       }
     </style>
   </head>
-
   <body>
   <div id="container" class="container">
-  <p>My view has been loaded</p>
-
-  <a href="https://twitter.com">twitter</a>
-  <a href="nullInternalPaths.js">link to js file</a>
-  <a href="https://github.com">github</a>
-  <a href="js/test">internal link</a>
+    <a href="https://twitter.com">twitter</a>
+    <a href="nullInternalPaths.js">link to js file</a>
+    <a href="https://github.com">github</a>
+    <a href="js/test">internal link</a>
   </div>
-
   <script src="handleInternalLinks.js"></script>
-
   <script>
     (function() {
       var bodyLinksHandler = handleInternalLinks(document.getElementById("container"), function(e) {
 				e.preventDefault();
 				var link = e.target;
 				alert(link.href);
-			})
+			});
       var newAnchor = document.createElement("a");
       newAnchor.href = "../internal";
       newAnchor.textContent = "this link was added after init and modified via the \".refreshLinks()\" method "
       document.getElementById("container").appendChild(newAnchor);
-      //console.log(bodyLinksHandler.currentLinks()) //returns static list of current elements - can potentially be used for "versioning"
       bodyLinksHandler.refreshLinks()
     })();
   </script>
-
   </body>
 </html>
