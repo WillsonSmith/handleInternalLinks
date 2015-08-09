@@ -1,0 +1,15 @@
+{
+  "name": "handleinternallinks",
+  "version": "1.0.0",
+  "description": "Call a given function for all internal links",
+  "main": "handleInternalLinks.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "coffee --watch --compile --output ./ ./"
+  },
+  "author": "Willson Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "jest-cli": "^0.4.18"
+  }
+}
