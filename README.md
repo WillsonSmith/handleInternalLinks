@@ -3,6 +3,8 @@ This is a small bit of javascript to handle all internal links.
 You can use it to perform another function on these links by passing it a callback, or alternatively you can pass it `null`
 to just add an `internal` attribute to all internal links.
 
+For convenience, both the `.coffee`, and `.js` files have been included.
+
 To use, either `require` it, or include it on your page. It is set up to use `module.exports` if available.
 From here, assign it to a variable either with a callback, or not.
 ```
