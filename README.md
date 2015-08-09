@@ -26,3 +26,6 @@ document.getElementById("container").appendChild(newAnchor);
 bodyLinksHandler.refreshLinks();
 ```
 for convenience, there is also a method `.currentLinks()` which will return a static array of all current links.
+
+##tests
+Tests are written using [Jest](https://facebook.github.io/jest/) by Facebook.
