@@ -7,7 +7,7 @@ handleInternalLinks = (container, callback) ->
 
   isLocalPath = (path) ->
     regexMatch = new RegExp(location.host)
-    path.match regexMatch
+    path.match(regexMatch)
 
   setInternalLinkAttribute = (links) ->
     for link in links
@@ -22,7 +22,7 @@ handleInternalLinks = (container, callback) ->
   ((container, links)->
     setInternalLinkAttribute(links)
     container.addEventListener("click", handleInternalAnchorClicks)
-    )(container, containerLinks)
+  )(container, containerLinks)
 
   {
     refreshLinks: () -> setInternalLinkAttribute(containerLinks)

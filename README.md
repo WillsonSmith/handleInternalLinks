@@ -31,3 +31,5 @@ for convenience, there is also a method `.currentLinks()` which will return a st
 
 ##tests
 Tests are written using [Jest](https://facebook.github.io/jest/) by Facebook.
+
+Note: tests may not run with io.js
